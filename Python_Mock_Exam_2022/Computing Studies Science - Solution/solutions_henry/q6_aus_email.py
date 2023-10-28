@@ -6,11 +6,11 @@ first_name = input('Enter your first name: ')
 email = input('Enter proposed email: ')
 
 if not (email[0].islower() or email[0].isupper()):
-    print('Email must begin with a lower case letter')
+    print('Email must begin with an alphabet (a-z, or A-Z)')
 elif ' ' in email:
     print('Email may not contain any spaces')
-elif first_name[0].lower() not in email.lower():
-    print('Email must contain first letter of first name')
+elif first_name[0].lower() != email[0].lower():
+    print('Email must contain first letter of first name as its first character')
 elif '@' not in email:
     print('Email must contain @ symbol')
 elif email[-3:] != '.au':

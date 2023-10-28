@@ -11,12 +11,12 @@ def calculate_course_mark(student):
 
 # should return a string representing the grade of the given marks
 def calculate_grade(course_mark, class_mark, exam_mark):
-    if (exam_mark < 40 or class_mark < 50) and course_mark >= 50:
-        grade = 'UF'
-    elif course_mark >= 50:
-        grade = 'PS'
+    if course_mark < 50:
+        grade = "FL"
+    elif class_mark < 50 or exam_mark < 40:
+        grade = "UF"
     else:
-        grade = 'FL'
+        grade = "PS"
     return grade
 
 
