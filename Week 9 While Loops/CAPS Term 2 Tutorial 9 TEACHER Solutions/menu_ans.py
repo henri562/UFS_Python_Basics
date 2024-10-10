@@ -5,20 +5,20 @@ toppings = []
 def online_rolls():
     print('Welcome to Online Rolls.')
     print('Our toppings are: lettuce, cucumbers, tomatoes, onions and capsicums.')
-    yes = input('Press y to order toppings: ')
-    while yes == 'y':
-        new_list = input('Topping: ')
-        if new_list in menu:
-            if new_list in toppings:
-                print('Sorry you have already ordered %s.' % new_list)
-                yes = input('Press y to order toppings: ')
+    response = input('Do you wish to order now? (y/n): ')
+    while response == 'y':
+        new_topping = input('Topping: ')
+        if new_topping in menu:
+            if new_topping in toppings:
+                print('Sorry you have already ordered %s.' % new_topping)
+                response = input('Continue to order? (y/n): ')
             else:
-                print('That will be %s' % new_list)
-                toppings.append(new_list)
-                yes = input('Press y to order toppings: ')
+                print('That will be %s' % new_topping)
+                toppings.append(new_topping)
+                response = input('Continue to order? (y/n): ')
         else:
-            print('Sorry not on our list of toppings.')
-            yes = input('Press y to order toppings: ')
+            print('Sorry, %s is not on our list of toppings.' % new_topping)
+            response = input('Continue to order? (y/n): ')
 
     print('\nThank you for your order!')
     if len(toppings) > 0:

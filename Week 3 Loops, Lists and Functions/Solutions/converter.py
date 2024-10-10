@@ -6,5 +6,4 @@ def converter(fahrenheit):
 degrees_fahrenheit = float(input('Type in the degrees Fahrenheit: '))
 degrees_celsius = converter(degrees_fahrenheit)
 
-print('%.1f Fahrenheit converted to Celsius is %.1f' \
-      % (degrees_fahrenheit, degrees_celsius))
+print('%.1f Fahrenheit converted to Celsius is %.1f.' % (degrees_fahrenheit, degrees_celsius))
