@@ -24,16 +24,16 @@ if is_number(user_input) == False:
     print('You did not enter a number. Cannot continue.')
     exit()
 
-num = int(user_input) - 1
-if num < 0 or num > 2:
+num = int(user_input)
+if num < 1 or num > 3:
     print('Number out of range')
     exit()
 
 amount = input('How much do you wish to exchange? ')
-amount = float(amount)
 if is_number(amount) == False:
     print('Impossible amount entered')
     exit()
 
-foreign_amount = amount * rate[num]
-print('Your %.2f Australian dollars is worth %.2f %ss.' % (amount, foreign_amount, currency[num]))
+amount = float(amount)
+foreign_amount = amount * rate[num - 1]
+print('Your %.2f Australian dollars is worth %.2f %ss.' % (amount, foreign_amount, currency[num - 1]))
